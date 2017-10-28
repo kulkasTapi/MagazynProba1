@@ -11,7 +11,8 @@ namespace MagazynProba1
         public Status ProductStatus { get; }
         public TypeOfProduct Type { get; }
         public Supplier Supplier { get; }
-        public double StockQuantitiy { get; }
+        public double StockQuantitiy { get; private set; }
+
         public void UpdateStatus(Status status)
         {
             throw new NotImplementedException();
@@ -34,7 +35,19 @@ namespace MagazynProba1
 
         public void UpdateQuantity(double newQuantity)
         {
-            throw new NotImplementedException();
+            StockQuantitiy = StockQuantitiy + newQuantity;
         }
+
+
+        public Component(int productId, string productName)
+        {
+            ProductId = productId;
+            ProductName = productName;
+            ProductStatus = Status.Ok;
+            Type = TypeOfProduct.Podeszwa;
+            Supplier = Supplier.Firma3;
+            StockQuantitiy = 0;
+        }
+
     }
 }

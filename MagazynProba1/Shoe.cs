@@ -11,7 +11,7 @@ namespace MagazynProba1
         public Status ProductStatus { get; }
         public TypeOfProduct Type { get; }
         public Supplier Supplier { get; }
-        public double StockQuantitiy { get; }
+        public double StockQuantitiy { get; private set; }
         public Size SizeOfShoe { get; }
 
         //chwilowo tylko konstruktor defaultowy, powienien być jeszcze taki wtóym zaciagamy dane z bazy oraz taki wk tórym można pisać ilośc towaru an stanie od razu
@@ -50,7 +50,7 @@ namespace MagazynProba1
 
         public void UpdateQuantity(double newQuantity)
         {
-            throw new NotImplementedException();
+            StockQuantitiy = StockQuantitiy + newQuantity;
         }
 
       

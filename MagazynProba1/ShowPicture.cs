@@ -11,7 +11,7 @@ namespace MagazynProba1
 
         
         
-        void DisplayProductPicture(IProduct product)
+        public void DisplayProductPicture(IProduct product)
         {
             if (product.Type == TypeOfProduct.But)
             {
